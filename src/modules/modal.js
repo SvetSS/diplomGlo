@@ -3,40 +3,35 @@ const modal = () => {
     const modal = document.querySelector('.modal-callback')//');
     const modalOverlay = document.querySelector('.modal-overlay');
     const buttons = document.querySelectorAll('.callback-btn');
-    const buns = document.querySelectorAll('.services-section .element .img-wrapper');
     const els = document.querySelectorAll('.services-section .element ');
     const closeBtn = modal.querySelector('.modal-close');
-    console.log(buns);
+
+    const closeModal = () => {
+        modal.style.display = 'none';
+        modalOverlay.style.display = 'none';
+    }
+    const openModal = () => {
+        modal.style.display = 'block';
+        modalOverlay.style.display = 'block';
+    }
+
     buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-
-            modal.style.display = 'block';
-            modalOverlay.style.display = 'block';
-
-        });
+        btn.addEventListener('click', openModal);
     });
+
     els.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            if (e.target.matches('img')) {
-                modal.style.display = 'block';
-                modalOverlay.style.display = 'block';
-                console.log(e.target);
+            //if (e.target.matches('img')) {
+            if (e.target.closest('.img-wrapper')) {
+                openModal();
+                //console.log(e.target);
             }
         });
     });
 
-
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-        modalOverlay.style.display = 'none';
-
-    });
-    document.addEventListener('click', e => {
-        if (e.target === closeBtn || e.target === modalOverlay) {
-            modal.style.display = 'none';
-            modalOverlay.style.display = 'none';
-        }
-    });
+    closeBtn.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
 
 }
+
 module.exports = modal;
