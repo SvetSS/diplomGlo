@@ -1299,13 +1299,31 @@ video#video_background {
 	transition: all 200ms ease-out;
 }
 
-/* .services-section .element:hover .img-wrapper:after {
-	opacity: 0;
-} */
+.services-section .element:hover .img-wrapper:after {
+	opacity: 1;
+}
 
-/* .services-section .element .img-wrapper:before {
+.services-section .element #1 {
+	display: block;
+	position: absolute;
+	width: 200px;
+	height: 48px;
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+	z-index: 2;
+	opacity: 0;
+	padding: 10px 0;
+	margin-top: -24px;
+}
+
+.services-section .element a {
+	z-index: 0;
+}
+
+.services-section .element .img-wrapper:before {
 	content: "Оформить заявку";
-	display: none;
+	display: block;
 	position: absolute;
 	width: 200px;
 	height: 48px;
@@ -1324,17 +1342,18 @@ video#video_background {
 	text-align: center;
 	text-transform: uppercase;
 	border: 2px solid #fff;
-} */
+}
 
-/* .services-section .element:hover .img-wrapper:before {
-	opacity: 0.5;
-} */
+.services-section .element:hover .img-wrapper:before {
+	opacity: 1;
+}
 
 .services-section .element .img-wrapper img {
 	-webkit-transition: all 200ms ease-out;
 	-moz-transition: all 200ms ease-out;
 	-o-transition: all 200ms ease-out;
 	transition: all 200ms ease-out;
+	z-index: 5;
 }
 
 .services-section .element:hover .img-wrapper img {

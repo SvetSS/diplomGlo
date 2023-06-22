@@ -15,16 +15,13 @@ const modal = () => {
 
         });
     });
-    buns.forEach(btn => {
+    els.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            //if (e.target.classList.contains('img-wrapper')) {
-            console.log(e.target);
-            modal.style.display = 'block';
-            modalOverlay.style.display = 'block';
-            console.log("Клик на псевдоэлементе!");
-            // }
-
-
+            if (e.target.matches('img')) {
+                modal.style.display = 'block';
+                modalOverlay.style.display = 'block';
+                console.log(e.target);
+            }
         });
     });
 

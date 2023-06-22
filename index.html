@@ -197,9 +197,10 @@
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
-									data-application="Ремонт, замена, перенос розеток"></a>
-								<div class="img-wrapper">
+
+								<div class="img-wrapper ">
+									<a id='1' class=" fancyboxModal" href="#application"
+										data-application="Ремонт, замена, перенос розеток"></a>
 									<img src="images/service3.jpg">
 								</div>
 								<div class="element-content">
@@ -619,32 +620,30 @@
 	<!-- * * * * * * Footer: end * * * * * * -->
 
 
-	<div class="modal-overlay">
-		<div class="modal-callback" id="callback">
-			<div class="modal-close">
-				<img src="images/close_icon_green.svg" alt="modal-close">
-			</div>
-			<div class="title-h2">Мы перезвоним через 5 минут!</div>
-			<br />
-			<div class="rf">
-				<form action="" name="form-callback">
-					<div class="form-group">
-						<input type="text" name="fio" class="form-control" placeholder="Ваше имя" />
-					</div>
+	<div class="modal-overlay"></div>
+	<!-- * * * * * * Callback modal block * * * * * * -->
+	<div class="modal-callback" id="callback">
+		<div class="modal-close">
+			<img src="images/close_icon_green.svg" alt="modal-close">
+		</div>
+		<div class="title-h2">Мы перезвоним через 5 минут!</div>
+		<br />
+		<div class="rf">
+			<form action="" name="form-callback">
+				<div class="form-group">
+					<input type="text" name="fio" class="form-control" placeholder="Ваше имя" />
+				</div>
 
-					<div class="form-group">
-						<input type="text" name="tel" class="form-control tel required" placeholder="Телефон*" />
-					</div>
-					<p><span class="red">*</span> <span class="f12">- поля, обязательные для заполнения</span></p>
-					<div>
-						<input type="submit" class="button btn feedback" value="Отправить" />
-					</div>
-				</form>
-			</div>
+				<div class="form-group">
+					<input type="text" name="tel" class="form-control tel required" placeholder="Телефон*" />
+				</div>
+				<p><span class="red">*</span> <span class="f12">- поля, обязательные для заполнения</span></p>
+				<div>
+					<input type="submit" class="button btn feedback" value="Отправить" />
+				</div>
+			</form>
 		</div>
 	</div>
-	<!-- * * * * * * Callback modal block * * * * * * -->
-
 	<!-- * * * * * * Callback modal block: end * * * * * * -->
 
 
